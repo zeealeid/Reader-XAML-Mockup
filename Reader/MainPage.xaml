@@ -1,0 +1,65 @@
+﻿<Page
+    x:Class="Reader.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Reader"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    xmlns:fluent="using:Fluent.Icons"
+    Background="{ThemeResource SystemChromeAltHighColor}"> 
+
+    <Grid>
+        <NavigationView IsBackButtonVisible="Collapsed" IsSettingsVisible="False" OpenPaneLength="200" IsPaneOpen="True" ItemInvoked="NavigationView_ItemInvoked" PaneDisplayMode="Left">
+            <NavigationView.PaneFooter>
+                <NavigationViewItem Content="New tag" x:Name="Add">
+                    <NavigationViewItem.Icon>
+                        <fluent:FluentIconElement Symbol="Add16"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.PaneFooter>
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Home" x:Name="Home">
+                    <NavigationViewItem.Icon>
+                        <fluent:FluentIconElement Symbol="Home16"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Recents" x:Name="Recents">
+                    <NavigationViewItem.Icon>
+                        <fluent:FluentIconElement Symbol="History20"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Search" x:Name="Search">
+                    <NavigationViewItem.Icon>
+                        <fluent:FluentIconElement Symbol="Search20"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItemSeparator />
+                <NavigationViewItemHeader Content="Tags"/>
+                <NavigationViewItem Content="Work" x:Name="Work">
+                    <NavigationViewItem.Icon>
+                        <fluent:FluentIconElement Symbol="Circle16Filled" Foreground="#9B59B6"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Misc" x:Name="Misc">
+                    <NavigationViewItem.Icon>
+                        <fluent:FluentIconElement Symbol="Circle16Filled" Foreground="#C0392B"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Content="Articles" x:Name="Articles" >
+                    <NavigationViewItem.Icon>
+                        <fluent:FluentIconElement Symbol="Circle16Filled" Foreground="#16A085"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+            <Frame x:Name="MyFrame" Margin="0, -32, 0, 0">
+                <TransitionCollection>
+                    <NavigationThemeTransition  />
+                </TransitionCollection>
+
+            </Frame>
+        </NavigationView>
+
+        
+    </Grid>
+</Page>
